@@ -1,0 +1,46 @@
+[color]
+  ui = true
+[user]
+	name = Phathdt
+	email = phathdt379@gmail.com
+	signingKey = ""
+[cola]
+	spellcheck = false
+	boldheaders = false
+	blameviewer = git gui blame
+	icontheme = light
+[core]
+  excludesfile = /Users/Phathdt/.gitignore_global
+  editor = /usr/local/bin/nvim
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[alias]
+  fuck2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  fuck = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  fuck3 = !"git fuck"
+[commit]
+  template = /Users/Phathdt/.stCommitMsg
+	gpgSign = false
+[push]
+  default = current
+	followTags = true
+[pull]
+  default = current
+[gui]
+	editor = code
+	historybrowser = gitk
+[diff]
+	tool = xxdiff
+[merge]
+	tool = xxdiff
+	keepbackup = false
+[gpg]
+	program = gpg
+[tag]
+	forceSignAnnotated = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
