@@ -5,6 +5,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/denite.nvim'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 " Moving around easier
@@ -27,7 +28,6 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'ruby-formatter/rufo-vim'
 call plug#end()
-
 
 
 filetype plugin on
@@ -56,14 +56,28 @@ set updatetime=100
 set guifont=:h
 set guifont=Hack_Nerd_Font:h11
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·
-set list
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set autoindent
 set smartindent
+set showtabline=2
+set clipboard=unnamedplus
+set autowrite
+set autoread
+au CursorHold * checktime
+" no backup
+set nobackup
+set nowb
+set noswapfile
+set backupdir=~/tmp,/tmp
+set backupcopy=yes
+set backupskip=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*
+set directory=/tmp
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 1
+let g:airline_theme='simple'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
