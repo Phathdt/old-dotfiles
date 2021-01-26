@@ -10,13 +10,17 @@ zplug "droctothorpe/kubecolor"
 zplug "nnao45/zsh-kubectl-completion"
 zplug "greymd/docker-zsh-completion"
 zplug "phathdt/zsh-plugin-rails"
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug "themes/robbyrussell", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/vagrant", from:oh-my-zsh
 
 zplug load
 
 # alias K8s
 alias k=kubectl
+alias vi=nvim
+alias vim=nvim
+alias n=nvim
 
 # alias Git
 alias gpall="git push origin --all"
@@ -24,23 +28,22 @@ alias gmerge='git checkout staging && git pull origin staging && git merge --no-
 
 alias ks='lsof -i :3000'
 
-alias ken='git config user.name "nusken" && git config user.email ken@nustechnology.com && echo "Git Ken"'
 alias phat='git config user.name "Phathdt" && git config user.email phathdt379@gmail.com && echo "Git Phathdt"'
+alias vy='git config user.name "JHVy" && git config user.email 16521470@gm.uit.edu.vn && echo "Git JHVy"'
 
-alias sra='cd ~/Documents/Working/NUS/WellStack && echo "Welcome SR_Analytics"'
 alias dev='cd ~/Documents/Dev/ && echo "Welcome Dev"'
 alias down='cd ~/Downloads/ && echo "Welcome Downloads"'
 
-export NVM_DIR="$HOME/.nvm"
+alias v='nvim'
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+export FZF_DEFAULT_COMMAND='fd --type f'
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PATH="$PATH:/Users/phathdt/Documents/PersistedStore/flutter/bin"
+# export PATH="$(yarn global bin):$PATH"
+# export PATH="/Users/phathdt/.asdf/installs/nodejs/12.18.4/.npm/bin:$PATH"
+# export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
 [[ -s "/Users/phathdt/.gvm/scripts/gvm" ]] && source "/Users/phathdt/.gvm/scripts/gvm"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+. $HOME/.asdf/asdf.sh
