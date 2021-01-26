@@ -1,5 +1,22 @@
-# Base16 Material Palenight 256 - alacritty color config
-# Nate Peterson
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 80
+    lines: 24
+
+  padding:
+    x: 10
+    y: 10
+
+  # decorations: none
+
+scrolling:
+  history: 20000
+
+  multiplier: 3
+
 colors:
   # Default colors
   primary:
@@ -42,22 +59,52 @@ colors:
     - { index: 21, color: '0x959dcb' }
 
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux) monospace
-    #   - (Windows) Consolas
-    # family: 'SF Mono'
-    family: 'Hack Nerd Font'
-
-    # The `style` can be specified to pick a specific face.
+    family: 'SF Mono Powerline'
     style: Regular
 
   # Point size
-  size: 11.0
+  size: 14.0
+
   offset:
     x: 0
     y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
+  # screens and make reading text a little easier.
+  scale_with_dpi: true
+
+  # Thin stroke font rendering (OS X only)
+  #
+  # Thin strokes are suitable for retina displays, but for non-retina screens
+  # it is recommended to set `use_thin_strokes` to `false`
+  use_thin_strokes: true
+key_bindings:
+  - { key: Key0, mods: Command, action: None }
+  - { key: Equals, mods: Command, action: None }
+  # - { key: Add, mods: Command, action: None }
+  - { key: Minus, mods: Command, action: None }
+  - { key: K, mods: Command, action: None }
+  - { key: H, mods: Command, action: None }
+  - { key: Q, mods: Command, action: None }
+  - { key: W, mods: Command, action: None }
+  # - { key: F, mods: Command, action: None }
+  - { key: M, mods: Command, action: None }
+  - { key: Return, mods: Command, action: None }
+  - { key: Up, mods: Alt, chars: "\x1b[1;5A" }
+  - { key: Down, mods: Alt, chars: "\x1b[1;5B" }
+  - { key: Left, mods: Alt, chars: "\x1bb" }
+  - { key: Right, mods: Alt, chars: "\x1bf" }
+  - { key: Key0, mods: Alt, chars: 'º' }
+  - { key: Key1, mods: Alt, chars: '¡' }
+  - { key: Key2, mods: Alt, chars: '€' }
+  - { key: Key3, mods: Alt, chars: '#' }
+  - { key: Key4, mods: Alt, chars: '¢' }
+  - { key: Key5, mods: Alt, chars: '∞' }
+  - { key: Key6, mods: Alt, chars: '§' }
+  - { key: Key7, mods: Alt, chars: '¶' }
+  - { key: Key8, mods: Alt, chars: '•' }
+  - { key: Key9, mods: Alt, chars: 'ª' }
