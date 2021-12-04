@@ -14,7 +14,6 @@ window:
 
 scrolling:
   history: 20000
-
   multiplier: 3
 
 colors:
@@ -60,7 +59,7 @@ colors:
 
 font:
   normal:
-    family: 'SF Mono Powerline'
+    family: 'JetBrainsMono Nerd Font Mono'
     style: Regular
 
   # Point size
@@ -87,7 +86,7 @@ key_bindings:
   - { key: Equals, mods: Command, action: None }
   # - { key: Add, mods: Command, action: None }
   - { key: Minus, mods: Command, action: None }
-  - { key: K, mods: Command, action: None }
+  # - { key: K, mods: Command, action: None }
   - { key: H, mods: Command, action: None }
   - { key: Q, mods: Command, action: None }
   - { key: W, mods: Command, action: None }
